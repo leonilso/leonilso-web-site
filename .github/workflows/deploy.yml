@@ -10,6 +10,16 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+
+
+      - name: Testar se o segredo existe
+        run: |
+          if [ -z "${{ secrets.SSH_PRIVATE_KEY }}" ]; then
+            echo "ERRO: A variável SSH_PRIVATE_KEY está VAZIA!"
+            exit 1
+          else
+            echo "Sucesso: O segredo foi carregado."
+          fi
       - name: Enviar arquivos para o servidor
         uses: appleboy/scp-action@master
         with:
