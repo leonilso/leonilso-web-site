@@ -1,28 +1,26 @@
-name: Deploy via SSH
+name: Deploy via SSH (Nginx Nativo)
 
 on:
   push:
-    branches:
-      - main 
+    branches: [ main ]
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout do código
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-      - name: Copiar arquivos via SCP
+      - name: Enviar arquivos para o servidor
         uses: appleboy/scp-action@v0.1.7
         with:
           host: ${{ secrets.REMOTE_HOST }}
           username: ${{ secrets.REMOTE_USER }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           port: ${{ secrets.REMOTE_PORT }}
-          source: "." 
+          source: "."
           target: "/var/www/leonilso"
 
-      - name: Executar comandos remotos
+      - name: Ajustar permissões finais
         uses: appleboy/ssh-action@v1.0.3
         with:
           host: ${{ secrets.REMOTE_HOST }}
@@ -30,4 +28,5 @@ jobs:
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           port: ${{ secrets.REMOTE_PORT }}
           script: |
-            sudo systemctl restart nginx
+            sudo chown -R leo:www-data /var/www/leonilso
+            sudo chmod -R 775 /var/www/leonilso
