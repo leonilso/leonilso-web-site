@@ -14,8 +14,8 @@ jobs:
 
       - name: Testar se o segredo existe
         run: |
-          if [ -z "${{ secrets.SSH_PRIVATE_KEY }}" ]; then
-            echo "ERRO: A variável SSH_PRIVATE_KEY está VAZIA!"
+          if [ -z "${{ secrets.REMOTE_HOST }}" ]; then
+            echo "ERRO: A variável REMOTE_HOST está VAZIA!"
             exit 1
           else
             echo "Sucesso: O segredo foi carregado."
