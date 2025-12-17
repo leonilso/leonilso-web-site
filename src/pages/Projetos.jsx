@@ -1,32 +1,84 @@
 import React from 'react';
 import ProjectCard from '../components/ProjectCard'; // Importa o componente ProjectCard
 import './Projetos.css'; // Opcional: para estilos específicos da página de projetos
+import site from '../assets/site.png'
+import agropoint from '../assets/agropoint.png'
+import batalha_naval from '../assets/batalha naval.png'
+import classroom from '../assets/classroom.png'
+import rco from '../assets/logo_sistema.png'
+import riobonito from '../assets/Rio-Bonito-do-Iguacu.png'
+import sabia from '../assets/sabia.png'
+import snake from '../assets/snake.png'
 
 function Projetos() {
   // Array de objetos com os dados dos seus projetos
-  const myProjects = [
-    {
-      title: "Meu E-commerce Frontend",
-      description: "Um projeto de e-commerce responsivo construído com React e Context API para gestão de estado.",
-      imageUrl: "https://via.placeholder.com/400x200/10b981/0b0f0c?text=Ecommerce", // Substitua por sua imagem real
-      projectUrl: "https://seulink.com/ecommerce",
-      githubUrl: "https://github.com/seugithub/ecommerce"
-    },
-    {
-      title: "Blog Pessoal com Markdown",
-      description: "Um blog estático que renderiza posts em Markdown, focado em performance e SEO.",
-      imageUrl: "https://via.placeholder.com/400x200/151d18/e2e8f0?text=Blog+Pessoal", // Substitua por sua imagem real
-      projectUrl: "https://seulink.com/blog",
-      githubUrl: "https://github.com/seugithub/blog"
-    },
-    {
-        title: "Landing Page Empresarial",
-        description: "Landing page moderna e animada para uma empresa de tecnologia, usando Scroll Reveal.",
-        imageUrl: "https://via.placeholder.com/400x200/0b0f0c/10b981?text=Landing+Page", // Substitua por sua imagem real
-        projectUrl: "https://seulink.com/landing",
-        githubUrl: "https://github.com/seugithub/landing"
-      },
-  ];
+const myProjects = [
+  {
+    title: "leonilso-web-site",
+    description:
+      "Site pessoal/responsivo hospedado localmente, feito com React e Vue para apresentar informações pessoais e trabalhos.",
+    imageUrl: site,
+    projectUrl: "https://github.com/leonilso/leonilso-web-site",
+    githubUrl: "https://github.com/leonilso/leonilso-web-site"
+  },
+  {
+    title: "ajudaRioBonito",
+    description:
+      "Projeto em JavaScript voltado para ajudar a comunidade de Rio Bonito com funcionalidades interativas.",
+    imageUrl: riobonito,
+    projectUrl: "https://github.com/leonilso/ajudaRioBonito",
+    githubUrl: "https://githubgithub.com/leonilso/ajudaRioBonito"
+  },
+  {
+    title: "sabIA",
+    description:
+      "Repositório criado para Startup Week, possivelmente com foco em inteligência artificial ou solução web.",
+    imageUrl: sabia,
+    projectUrl: "https://github.com/leonilso/sabIA",
+    githubUrl: "https://github.com/leonilso/sabIA"
+  },
+  {
+    title: "ButtomRCOExtension",
+    description:
+      "Extensão de navegador para importar notas via CSV — utilidade prática para fluxo de trabalho.",
+    imageUrl: rco,
+    projectUrl: "https://github.com/leonilso/ButtomRCOExtension",
+    githubUrl: "https://github.com/leonilso/ButtomRCOExtension"
+  },
+  {
+    title: "Genetic-Algorithm-for-optimization-logistic",
+    description:
+      "Projeto em React-Native + FastAPI com Python — algoritmo genético para otimização logística.",
+    imageUrl: agropoint,
+    projectUrl: "https://github.com/leonilso/Genetic-Algorithm-for-optimization-logistic",
+    githubUrl: "https://github.com/leonilso/Genetic-Algorithm-for-optimization-logistic"
+  },
+  {
+    title: "Google-Classroom-API-python",
+    description:
+      "Scripts Python para integrar com Google Classroom via API — automatiza mensagens e gestão de aulas.",
+    imageUrl: classroom,
+    projectUrl: "https://github.com/leonilso/Google-Classroom-API-python",
+    githubUrl: "https://github.com/leonilso/Google-Classroom-API-python"
+  },
+  {
+    title: "Batalha_Naval",
+    description:
+      "Jogo clássico Batalha Naval feito em JavaScript usando p5.js para lógica e visualização.",
+    imageUrl: batalha_naval,
+    projectUrl: "https://github.com/leonilso/Batalha_Naval",
+    githubUrl: "https://github.com/leonilso/Batalha_Naval"
+  },
+  {
+    title: "Snake_Game_in_C",
+    description:
+      "Implementação do jogo da cobrinha em C, rodando no terminal — projeto de lógica e estrutura básica.",
+    imageUrl: snake,
+    projectUrl: "https://github.com/leonilso/Snake_Game_in_C",
+    githubUrl: "https://github.com/leonilso/Snake_Game_in_C"
+  }
+];
+
 
   return (
     <div className="fade-in">
