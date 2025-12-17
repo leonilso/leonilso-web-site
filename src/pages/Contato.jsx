@@ -15,7 +15,7 @@ function Contato() {
             <FaEnvelope className="icon" />
             <div>
               <h3>E-mail</h3>
-              <p>teuemail@exemplo.com</p>
+              <p>leonilso@gmail.com</p>
             </div>
           </div>
 
@@ -23,7 +23,7 @@ function Contato() {
             <FaLinkedin className="icon" />
             <div>
               <h3>LinkedIn</h3>
-              <a href="https://linkedin.com/in/teu-perfil" target="_blank" rel="noreferrer">/in/teu-perfil</a>
+              <a href="https://www.linkedin.com/in/leonilso-wrublak-a63769262/" target="_blank" rel="noreferrer">in/leonilso-wrublak</a>
             </div>
           </div>
 
@@ -31,7 +31,7 @@ function Contato() {
             <FaGithub className="icon" />
             <div>
               <h3>GitHub</h3>
-              <a href="https://github.com/teu-user" target="_blank" rel="noreferrer">@teu-user</a>
+              <a href="https://github.com/leonilso" target="_blank" rel="noreferrer">@leonilso</a>
             </div>
           </div>
         </div>
