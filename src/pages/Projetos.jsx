@@ -1,6 +1,6 @@
 import React from 'react';
-import ProjectCard from '../components/ProjectCard'; // Importa o componente ProjectCard
-import './Projetos.css'; // Opcional: para estilos específicos da página de projetos
+import ProjectCard from '../components/ProjectCard';
+import './Projetos.css';
 import site from '../assets/site.png'
 import agropoint from '../assets/agropoint.png'
 import batalha_naval from '../assets/batalha naval.png'
@@ -11,12 +11,11 @@ import sabia from '../assets/sabia.png'
 import snake from '../assets/snake.png'
 
 function Projetos() {
-  // Array de objetos com os dados dos seus projetos
 const myProjects = [
   {
     title: "leonilso-web-site",
     description:
-      "Site pessoal/responsivo hospedado localmente, feito com React e Vue para apresentar informações pessoais e trabalhos.",
+      "Site pessoal/responsivo hospedado localmente, feito com React e Vue para apresentar informações pessoais e trabalhos, com automação com github actions.",
     imageUrl: site,
     projectUrl: "https://github.com/leonilso/leonilso-web-site",
     githubUrl: "https://github.com/leonilso/leonilso-web-site"
@@ -32,7 +31,7 @@ const myProjects = [
   {
     title: "sabIA",
     description:
-      "Repositório criado para Startup Week, possivelmente com foco em inteligência artificial ou solução web.",
+      "Repositório criado para Startup Week, com foco em criação de provas com inteligência artificial.",
     imageUrl: sabia,
     projectUrl: "https://github.com/leonilso/sabIA",
     githubUrl: "https://github.com/leonilso/sabIA"
@@ -48,7 +47,7 @@ const myProjects = [
   {
     title: "Genetic-Algorithm-for-optimization-logistic",
     description:
-      "Projeto em React-Native + FastAPI com Python — algoritmo genético para otimização logística.",
+      "Projeto em React-Native + FastAPI com Python — algoritmo genético para otimização logística de produção de fruticultura.",
     imageUrl: agropoint,
     projectUrl: "https://github.com/leonilso/Genetic-Algorithm-for-optimization-logistic",
     githubUrl: "https://github.com/leonilso/Genetic-Algorithm-for-optimization-logistic"
@@ -87,7 +86,7 @@ const myProjects = [
       <div className="projects-grid">
         {myProjects.map((project, index) => (
           <ProjectCard
-            key={index} // Sempre use uma key única em listas no React
+            key={index} 
             title={project.title}
             description={project.description}
             imageUrl={project.imageUrl}
