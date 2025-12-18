@@ -8,7 +8,7 @@
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "deploy": "npm run build && gh-pages -d dist && git add . && git commit -m \"build\" && git push && git switch gh-pages && git fetch origin && git reset --hard origin/gh-pages && git switch main && git push"
+    "deploy": "npm run build && gh-pages -d dist && git add . && git commit -m \"build\" && git push --set-upstream origin dev && git switch gh-pages && git fetch origin && git reset --hard origin/gh-pages && git switch main && git push"
   },
   "dependencies": {
     "react": "^19.2.0",
