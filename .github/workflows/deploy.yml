@@ -3,6 +3,9 @@ name: Deploy via SSH (Nginx Nativo)
 on:
   push:
     branches: [ main ]
+    paths:
+      - 'assets/**'
+      - 'index.html'
 
 jobs:
   deploy:
@@ -28,5 +31,6 @@ jobs:
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           port: ${{ secrets.REMOTE_PORT }}
           script: |
-            sudo chown -R leo:www-data /var/www/leonilso
+            sudo chown -R ${{ secrets.REMOTE_USER }}:www-data /var/www/leonilso
+
             sudo chmod -R 775 /var/www/leonilso
