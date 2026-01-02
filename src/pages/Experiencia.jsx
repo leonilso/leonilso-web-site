@@ -17,7 +17,7 @@ function Experiencia() {
     },
     {
       profissao: "Professor Formador",
-      anos: "2023 - 2025",
+      anos: "2025 - 2025",
       descricao: "Ministrando cursos na área de tecnologia Scratch, IA, planilhas, além de automações com Classroom, Google Sheets WhatsApp e Python"
     },
     {
