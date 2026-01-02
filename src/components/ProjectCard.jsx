@@ -16,11 +16,11 @@ function ProjectCard({ title, description, imageUrl, projectUrl, githubUrl }) {
               Ver Projeto
             </a>
           )}
-          {githubUrl && (
+          {/* {githubUrl && (
             <a href={githubUrl} target="_blank" rel="noopener noreferrer" className="project-link-btn github">
               GitHub
             </a>
-          )}
+          )} */}
         </div>
       </div>
     </div>

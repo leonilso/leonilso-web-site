@@ -30,16 +30,16 @@ function Experiencia() {
   ]
   const certificados = [
     {
-      certificado: "React Native: criando um app",
-      certificadora: "Alura",
-      mes: "dez",
-      ano: 2025,
-    },
-    {
       certificado: "INTRODUÇÃO À ANÁLISE DE DADOS - MICROSOFT POWER BI",
       certificadora: "Fundação Bradesco",
       mes: "jan",
       ano: 2026,
+    },
+    {
+      certificado: "React Native: criando um app",
+      certificadora: "Alura",
+      mes: "dez",
+      ano: 2025,
     },
     {
       certificado: "Techstars Startup Weekend Cascavel 2025",
@@ -127,6 +127,7 @@ function Experiencia() {
       <h1 style={{ color: 'var(--primary-green)' }}>Experiência & Cursos</h1>
 
       <section>
+        <h2>Experiências profissionais</h2>
         {minhasExperiencias.map((experiencia, index) => (
           <ExperienciaCard
             key={index}
