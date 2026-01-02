@@ -35,7 +35,7 @@ function Home() {
           <span className="stat-label">Projetos Criados</span>
         </div>
         <div className="stat">
-          <span className="stat-number">5+</span>
+          <span className="stat-number">15+</span>
           <span className="stat-label">Cursos Concluídos</span>
         </div>
       </section>
