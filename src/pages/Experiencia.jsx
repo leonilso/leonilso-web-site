@@ -36,6 +36,12 @@ function Experiencia() {
       ano: 2025,
     },
     {
+      certificado: "INTRODUÇÃO À ANÁLISE DE DADOS - MICROSOFT POWER BI",
+      certificadora: "Fundação Bradesco",
+      mes: "jan",
+      ano: 2026,
+    },
+    {
       certificado: "Techstars Startup Weekend Cascavel 2025",
       certificadora: "Techstars Startup Weekend Cascavel",
       mes: "nov",
