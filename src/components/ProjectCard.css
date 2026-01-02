@@ -31,7 +31,45 @@
   height: 100%;
   object-fit: cover; /* Garante que a imagem preencha o container sem distorcer */
   transition: transform 0.3s ease;
+  opacity: 0;
+  transform: scale(1.03);
+  transition: opacity 0.5s ease, transform 0.6s ease;
 }
+
+.project-image-container {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-radius: 12px;
+  background: #111;
+}
+
+/* Skeleton */
+.image-skeleton {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    #1e1e1e 25%,
+    #2a2a2a 37%,
+    #1e1e1e 63%
+  );
+  background-size: 400% 100%;
+  animation: shimmer 1.4s infinite;
+}
+
+@keyframes shimmer {
+  0% { background-position: 100% 0; }
+  100% { background-position: -100% 0; }
+}
+
+
+.project-image.loaded {
+  opacity: 1;
+  transform: scale(1);
+}
+
 
 .project-card:hover .project-image {
   transform: scale(1.05); /* Pequeno zoom na imagem no hover */
