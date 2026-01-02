@@ -9,6 +9,7 @@ import rco from '../assets/logo_sistema.png'
 import riobonito from '../assets/Rio-Bonito-do-Iguacu.png'
 import sabia from '../assets/sabia.png'
 import snake from '../assets/snake.png'
+import credito from '../assets/matriz_correlacao.png'
 
 function Projetos() {
 const myProjects = [
@@ -35,6 +36,14 @@ const myProjects = [
     imageUrl: sabia,
     projectUrl: "https://github.com/leonilso/sabIA",
     githubUrl: "https://github.com/leonilso/sabIA"
+  },
+  {
+    title: "Previsão de default em operações de crédito",
+    description:
+      "Previsão de casos de inadimplência utilizando Inteligência Artificial com base no histórico de dados bancários",
+    imageUrl: credito,
+    projectUrl: "https://github.com/leonilso/Previs-o-de-Default-em-cr-dito/",
+    githubUrl: "https://github.com/leonilso/Previs-o-de-Default-em-cr-dito/"
   },
   {
     title: "ButtomRCOExtension",
