@@ -1,0 +1,36 @@
+.experiencia-card {
+  background: var(--card-bg);
+  padding: 1.2rem;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+  border: 1px solid transparent;
+  transition: 0.3s;
+}
+
+.experiencia-card:hover {
+  border-color: var(--primary-green);
+  transform: translateX(5px);
+}
+
+.experiencia-header {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.experiencia-header h3 {
+  margin: 0;
+  color: var(--primary-green);
+}
+
+.experiencia-card p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #94a3b8;
+}
+
+#anos {
+    color: white;
+    padding-bottom: 5px;
+}

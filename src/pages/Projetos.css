@@ -1,0 +1,15 @@
+/* src/pages/Projetos.css */
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* 2 ou 3 colunas, responsivo */
+  gap: 2rem; /* Espaçamento entre os cards */
+  padding: 1rem;
+}
+
+/* Ajustes para telas muito pequenas */
+@media (max-width: 600px) {
+  .projects-grid {
+    grid-template-columns: 1fr; /* Apenas uma coluna em telas pequenas */
+  }
+}

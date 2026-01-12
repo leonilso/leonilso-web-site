@@ -1,0 +1,147 @@
+/* src/components/ProjectCard.css */
+
+.project-card {
+  background-color: var(--card-bg);
+  border-radius: 8px;
+  overflow: hidden; /* Garante que a imagem respeite o border-radius */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column; /* Conteúdo em coluna */
+  height: 100%; /* Garante que os cards na grid tenham a mesma altura */
+}
+
+.project-card:hover {
+  transform: translateY(-8px); /* Efeito de "levantar" no hover */
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.project-image-container {
+  width: 100%;
+  height: 200px; /* Altura fixa para as imagens */
+  overflow: hidden;
+  background-color: #0d120f; /* Cor de fundo caso a imagem não carregue */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.project-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Garante que a imagem preencha o container sem distorcer */
+  transition: transform 0.3s ease;
+  opacity: 0;
+  transform: scale(1.03);
+  transition: opacity 0.5s ease, transform 0.6s ease;
+}
+
+.project-image-container {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-radius: 12px;
+  background: #111;
+}
+
+/* Skeleton */
+.image-skeleton {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    #1e1e1e 25%,
+    #2a2a2a 37%,
+    #1e1e1e 63%
+  );
+  background-size: 400% 100%;
+  animation: shimmer 1.4s infinite;
+}
+
+@keyframes shimmer {
+  0% { background-position: 100% 0; }
+  100% { background-position: -100% 0; }
+}
+
+
+.project-image.loaded {
+  opacity: 1;
+  transform: scale(1);
+}
+
+
+.project-card:hover .project-image {
+  transform: scale(1.05); /* Pequeno zoom na imagem no hover */
+}
+
+.project-info {
+  padding: 1.5rem;
+  flex-grow: 1; /* Permite que o info ocupe o espaço restante */
+  display: flex;
+  flex-direction: column;
+}
+
+.project-title {
+  color: var(--primary-green);
+  font-size: 1.6rem;
+  margin-bottom: 0.8rem;
+}
+
+.project-description {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--text-main);
+  margin-bottom: 1.5rem;
+  flex-grow: 1; /* Faz a descrição ocupar o máximo de espaço possível */
+}
+
+.project-links {
+  margin-top: auto; /* Empurra os botões para o final do card */
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap; /* Permite que os botões quebrem a linha se não houver espaço */
+}
+
+.project-link-btn {
+  display: inline-block;
+  background-color: var(--primary-green);
+  color: var(--card-bg); /* Cor escura para o texto do botão */
+  padding: 0.8rem 1.2rem;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  flex-shrink: 0; /* Não permite que o botão encolha */
+}
+
+.project-link-btn:hover {
+  background-color: #0e8c65; /* Um tom um pouco mais escuro de verde */
+  transform: translateY(-2px);
+}
+
+.project-link-btn.github {
+  background-color: #6a737d; /* Cinza para o GitHub */
+  color: white;
+}
+
+.project-link-btn.github:hover {
+  background-color: #4a5157;
+}
+
+/* Responsividade básica */
+@media (max-width: 768px) {
+  .project-image-container {
+    height: 180px;
+  }
+  .project-title {
+    font-size: 1.4rem;
+  }
+  .project-description {
+    font-size: 0.9rem;
+  }
+  .project-link-btn {
+    padding: 0.6rem 1rem;
+    font-size: 0.9rem;
+  }
+}
