@@ -1,32 +1,67 @@
-name: Deploy via SSH (Nginx Nativo)
+# name: Deploy via SSH (Nginx Nativo)
 
+# on:
+#   push:
+#     branches: [ main ]
+
+# jobs:
+#   deploy:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - uses: actions/checkout@v4
+      
+#       - name: Enviar arquivos para o servidor
+#         uses: appleboy/scp-action@master
+#         with:
+#           host: ${{ secrets.REMOTE_HOST }}
+#           username: ${{ secrets.REMOTE_USER }}
+#           key: ${{ secrets.SSH_PRIVATE_KEY }}
+#           port: ${{ secrets.REMOTE_PORT }}
+#           source: "."
+#           target: "/var/www/leonilso"
+
+#       - name: Ajustar permissões finais
+#         uses: appleboy/ssh-action@master
+#         with:
+#           host: ${{ secrets.REMOTE_HOST }}
+#           username: ${{ secrets.REMOTE_USER }}
+#           key: ${{ secrets.SSH_PRIVATE_KEY }}
+#           port: ${{ secrets.REMOTE_PORT }}
+#           script: |
+#             sudo chown -R leo:www-data /var/www/leonilso
+#             sudo chmod -R 775 /var/www/leonilso
+
+
+name: Deploy nginx
 on:
   push:
     branches: [ main ]
 
 jobs:
-  deploy:
+  build-and-deploy:
     runs-on: ubuntu-latest
+
     steps:
       - uses: actions/checkout@v4
-      
-      - name: Enviar arquivos para o servidor
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build
+        run: npm run build
+
+      - name: Deploy dist via rsync
         uses: appleboy/scp-action@master
         with:
           host: ${{ secrets.REMOTE_HOST }}
           username: ${{ secrets.REMOTE_USER }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           port: ${{ secrets.REMOTE_PORT }}
-          source: "."
+          source: "dist/*"
           target: "/var/www/leonilso"
-
-      - name: Ajustar permissões finais
-        uses: appleboy/ssh-action@master
-        with:
-          host: ${{ secrets.REMOTE_HOST }}
-          username: ${{ secrets.REMOTE_USER }}
-          key: ${{ secrets.SSH_PRIVATE_KEY }}
-          port: ${{ secrets.REMOTE_PORT }}
-          script: |
-            sudo chown -R leo:www-data /var/www/leonilso
-            sudo chmod -R 775 /var/www/leonilso
