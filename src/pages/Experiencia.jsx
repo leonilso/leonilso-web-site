@@ -119,6 +119,12 @@ function Experiencia() {
       mes: "jul",
       ano: 2023,
     },
+    {
+      certificado: "Programador Java: Nível Básico",
+      certificadora: "+IFMG",
+      mes: "fev",
+      ano: 2026,
+    },
   ];
 
 

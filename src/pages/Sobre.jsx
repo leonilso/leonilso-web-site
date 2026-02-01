@@ -36,35 +36,41 @@ function Sobre() {
           <p>
             Durante os anos de 2024 e 2025 minha caminhada na programação só evoluiu, pelas exigências como professor e trabalhos exigidos durante a graduação meus conhecimentos ganharam capilaridade, onde me aprofundei na área de <strong>DEVOPS</strong>, na <strong>infraestrutura de redes</strong>, (por exemplo esse site está hospedado em meu <strong>homelab</strong>), além de criar projetos utilizando <strong>React Native</strong>, APIs usando <strong>Node</strong>, bancos de dados usando <strong>SQL</strong>, automações com Google <strong>App Script</strong>, além de projetos menores para aprendizado com <strong>Python</strong>, <strong>C++</strong> e <strong>PHP</strong>.
           </p>
-          
+
+
+        </div>
+
+        {/* Lado Direito: Skills/Habilidades */}
+        <div>
           <div className="educacao-container">
             <div className="edu-item">
-              <FaGraduationCap className="icon-green" />
               <div>
                 <h4>Formação Acadêmica</h4>
                 <p>Informática (Licenciatura) - UNINA</p>
                 <p>Ciências Econômicas (Bacharelado) - UFFS</p>
               </div>
+              <FaGraduationCap className="icon-green" />
             </div>
           </div>
-        </div>
 
-        {/* Lado Direito: Skills/Habilidades */}
-        <div className="sobre-skills">
-          <h3>Minhas Skills</h3>
-          {skills.map((skill, index) => (
-            <div key={index} className="skill-card">
-              <div className="skill-header">
-                {index === 0 && <FaCode className="icon-green" />}
-                {index === 1 && <FaToolbox className="icon-green" />}
-                {index === 2 && <FaServer className="icon-green" />}
-                {index === 3 && <FaToolbox className="icon-green" />}
-                {index === 4 && <FaNetworkWired className="icon-green" />}
-                <h4>{skill.name}</h4>
+          <div className="sobre-skills">
+            <h3>Minhas Skills</h3>
+            {skills.map((skill, index) => (
+              <div key={index} className="skill-card">
+                <div className="skill-header">
+                  {index === 0 && <FaCode className="icon-green" />}
+                  {index === 1 && <FaToolbox className="icon-green" />}
+                  {index === 2 && <FaServer className="icon-green" />}
+                  {index === 3 && <FaToolbox className="icon-green" />}
+                  {index === 4 && <FaNetworkWired className="icon-green" />}
+                  <h4>{skill.name}</h4>
+                </div>
+                <p>{skill.tools}</p>
               </div>
-              <p>{skill.tools}</p>
-            </div>
-          ))}
+            ))}
+          </div>
+
+
         </div>
       </div>
     </div>

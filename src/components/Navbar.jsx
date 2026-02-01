@@ -32,6 +32,9 @@ function Navbar() {
           <Link to="/experiencia" className={location.pathname === "/experiencia" ? "active" : ""} onClick={closeMenu}>Experiência</Link>
         </li>
         <li>
+          <Link to="/lab" className={location.pathname === "/lab" ? "active" : ""} onClick={closeMenu}>Lab</Link>
+        </li>
+        <li>
           <Link to="/contato" className={location.pathname === "/contato" ? "active" : ""} onClick={closeMenu}>Contato</Link>
         </li>
       </ul>

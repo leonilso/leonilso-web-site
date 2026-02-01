@@ -27,10 +27,13 @@
   color: var(--primary-green);
 }
 
-.educacao {
-  margin-top: 2.5rem;
-  padding-top: 2rem;
-  border-top: 1px solid #2d3748;
+.educacao-container {
+  margin-top: 2rem;}
+
+.educacao-container h4 {
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+  color: white;
 }
 
 .edu-item {
