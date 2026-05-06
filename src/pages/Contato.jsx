@@ -6,6 +6,8 @@ function Contato() {
   function enviarEmail(e) {
     e.preventDefault();
 
+    const form = e.target;
+
     const data = {
       nome: e.target[0].value,
       email: e.target[1].value,
@@ -17,8 +19,13 @@ function Contato() {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(data)
     })
-    .then(() => alert('Mensagem enviada!'))
-    .catch(() => alert('Erro'));
+    .then(() => {
+      alert('Mensagem enviada com sucesso!')
+      form.reset();
+
+
+    })
+    .catch(() => alert('Erro ao enviar mensagem tente novamente'));
   }
   return (
     <div className="contato-container fade-in">
