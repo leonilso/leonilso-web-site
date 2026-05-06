@@ -3,6 +3,23 @@ import './Contato.css';
 import { FaGithub, FaLinkedin, FaEnvelope, FaWhatsapp } from 'react-icons/fa'; // Precisaremos instalar react-icons
 
 function Contato() {
+  function enviarEmail(e) {
+    e.preventDefault();
+
+    const data = {
+      nome: e.target[0].value,
+      email: e.target[1].value,
+      mensagem: e.target[2].value
+    };
+
+    fetch('https://leonilso.com.br/server/contato', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data)
+    })
+    .then(() => alert('Mensagem enviada!'))
+    .catch(() => alert('Erro'));
+  }
   return (
     <div className="contato-container fade-in">
       <h1 className="section-title">Vamos Conversar?</h1>
@@ -37,7 +54,7 @@ function Contato() {
         </div>
 
         {/* Lado Direito: Formulário */}
-        <form className="contato-form">
+        <form className="contato-form" onSubmit={enviarEmail}>
           <div className="form-group">
             <label>Nome</label>
             <input type="text" placeholder="Teu nome" required />
@@ -59,5 +76,7 @@ function Contato() {
     </div>
   );
 }
+
+
 
 export default Contato;
