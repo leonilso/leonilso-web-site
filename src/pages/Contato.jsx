@@ -12,7 +12,7 @@ function Contato() {
       mensagem: e.target[2].value
     };
 
-    fetch('https://leonilso.com.br/server/contato', {
+    fetch('/api/contato', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(data)
