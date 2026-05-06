@@ -22,8 +22,6 @@ function Contato() {
     .then(() => {
       alert('Mensagem enviada com sucesso!')
       form.reset();
-
-
     })
     .catch(() => alert('Erro ao enviar mensagem tente novamente'));
   }
