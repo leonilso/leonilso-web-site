@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# Evita bloquear assets importantes
+Allow: /assets/
+Allow: /*.js$
+Allow: /*.css$
+
+Sitemap: https://leonilso.com.br/sitemap.xml
