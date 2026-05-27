@@ -8,7 +8,7 @@ function Home() {
       <section className="hero">
         <div className="hero-content">
           <span className="greeting">Olá, eu sou</span>
-          <h1 className="name">Leonilso F. Wrublak <span className="dot">.</span></h1>
+          <h1 className="name">Leonilso Fandres Wrublak <span className="dot">.</span></h1>
           <h2 className="role">Professor e Desenvolvedor Full-Stack</h2>
           <p className="description">
             Especializado em construir experiências digitais modernas, 
